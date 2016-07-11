@@ -12,7 +12,7 @@ var candies = [
 var validColors = ['Red', 'Green', 'Blue', 'Pink', 'Black'];
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Candies' });
 });
 
