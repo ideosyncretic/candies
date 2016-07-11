@@ -21,22 +21,22 @@ mongoose.connect('mongodb://default:defaultpassword@ds059524.mlab.com:59524/spra
 
   Candy.create ({
     name: 'Chewing Gum',
-    color: 'Red',
+    color: 'Red'
     },
 
     {
     name: 'Pez',
-    color: 'Green',
+    color: 'Green'
     },
 
     {
     name: 'Marshmallow',
-    color: 'Pink',
+    color: 'Pink'
     },
 
     {
     name: 'Candy Stick',
-    color: 'Blue',
+    color: 'Blue'
     });
 
   // candy.save((err) => {
