@@ -11,11 +11,6 @@ var candies = [
 
 var validColors = ['Red', 'Green', 'Blue', 'Pink', 'Black'];
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Candies, a sandbox project by Sprazzeus' });
-});
-
 // CORS
 router.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
