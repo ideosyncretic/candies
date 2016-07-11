@@ -85,7 +85,7 @@ describe('POST /candies', () => {
     })
     .end( (error, response) => {
       expect(422)
-      expect(response.body.message).to.equal('Candy 6 not valid and not created.')
+      expect(response.body.message).to.equal('Candy 6 not valid and not created.');
       done()
     })
   })

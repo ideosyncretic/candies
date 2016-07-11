@@ -52,7 +52,7 @@ router.post('/candies', (req, res) => {
   });
 
   var candy = {
-    id: parseInt(req.body.id),
+    id: parseInt(req.body.id, 10),
     name: req.body.name,
     color: req.body.color
   }
