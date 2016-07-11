@@ -45,25 +45,27 @@ router.get('/candies/:id', (req, res) => {
 // CREATE
 router.post('/candies', (req, res) => {
   console.log(req.body);
-  res.status(201).json({message: 'Candy created',
-  id: req.body.id,
-  name: req.body.name,
-  color: req.body.color
-  });
+
+  // invalid color exit
+  if (validColors.indexOf(req.body.color) === -1) {
+    res.status(422).json({
+      message: `Candy not valid and not created.`});
+    return;
+  }
 
   var candy = {
     id: parseInt(req.body.id, 10),
     name: req.body.name,
     color: req.body.color
-  }
+  };
 
-  if (validColors.indexOf(candy.color) !== -1) {
   candies.push(candy);
-  }
-  else {
-    res.status(422).json({
-      message: `Candy ${req.params.id} not valid and not created.`});
-  }
+
+  res.status(201).json({message: 'Candy created',
+  id: req.body.id,
+  name: req.body.name,
+  color: req.body.color
+  });
 });
 
 // UPDATE
